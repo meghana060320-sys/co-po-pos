@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+:root {
+  --role-faculty: #3b82f6; /* Blue */
+  --role-lead: #10b981;    /* Green */
+  --role-hod: #f59e0b;     /* Orange */
+  --role-admin: #8b5cf6;   /* Purple */
+  --role-student: #14b8a6;  /* Teal */
+}
+
+@layer base {
+  body {
+    @apply bg-[#f8fafc] text-slate-900 antialiased;
+  }
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.data-grid-row {
+  @apply border-b border-slate-100 hover:bg-slate-50/50 transition-colors;
+}
+
+.role-faculty-bg { background-color: var(--role-faculty); }
+.role-lead-bg { background-color: var(--role-lead); }
+.role-hod-bg { background-color: var(--role-hod); }
+.role-admin-bg { background-color: var(--role-admin); }
+.role-student-bg { background-color: var(--role-student); }
+
+.role-faculty-text { color: var(--role-faculty); }
+.role-lead-text { color: var(--role-lead); }
+.role-hod-text { color: var(--role-hod); }
+.role-admin-text { color: var(--role-admin); }
+.role-student-text { color: var(--role-student); }
+
+.role-faculty-border { border-color: var(--role-faculty); }
+.role-lead-border { border-color: var(--role-lead); }
+.role-hod-border { border-color: var(--role-hod); }
+.role-admin-border { border-color: var(--role-admin); }
+.role-student-border { border-color: var(--role-student); }
